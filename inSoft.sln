@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inCRM", "inCRM\inCRM.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBHandler", "DBHandler\DBHandler.csproj", "{2FA8A6D3-6BCE-40C4-98C7-12C720DB1A7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inCRMTests", "inCRMTests\inCRMTests.csproj", "{0A95F50D-742E-4417-88EE-16C65AAA2210}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{2FA8A6D3-6BCE-40C4-98C7-12C720DB1A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FA8A6D3-6BCE-40C4-98C7-12C720DB1A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FA8A6D3-6BCE-40C4-98C7-12C720DB1A7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0A95F50D-742E-4417-88EE-16C65AAA2210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A95F50D-742E-4417-88EE-16C65AAA2210}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A95F50D-742E-4417-88EE-16C65AAA2210}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A95F50D-742E-4417-88EE-16C65AAA2210}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

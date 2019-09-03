@@ -39,8 +39,6 @@ namespace inCRM
 
         public static string CurrentUser()
         {
-			if (credentials.UserId != String.Empty)
-				return credentials.UserId;
 			using (SqlConnection con = new SqlConnection(connString, credentials))
             {
                 try
