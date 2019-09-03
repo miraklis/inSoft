@@ -1,0 +1,54 @@
+﻿<Window x:Class="inCRM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:inCRM"
+        mc:Ignorable="d"        
+        Title="Intelligent CRM" Height="450" Width="1000">
+    <DockPanel LastChildFill="False">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Name="mnConnect" Command="{Binding LoginCommand}">
+                    <MenuItem.Style>
+                        <Style TargetType="MenuItem">
+                            <Setter Property="Header" Value="_Connect..." />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ConnectionEstablished}" Value="True">
+                                    <Setter Property="Header" Value="_Disconnect" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </MenuItem.Style>
+                </MenuItem>
+                <MenuItem Header="_Options..." />
+                <Separator />
+                <MenuItem Header="E_xit" Command="{Binding CloseWindowCommand}" />
+            </MenuItem>
+            <MenuItem Header="_Data">
+                <MenuItem Header="_Customers" Command="{Binding ShowCustomersCommand}" />
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock Name="lblConnectionStatus">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Text" Value="No connection to the database" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ConnectionEstablished}" Value="True">
+                                <Setter Property="Text">
+                                    <Setter.Value>
+                                        <MultiBinding StringFormat="{}{0} connected to {1}">
+                                            <Binding Path="Username" />
+                                            <Binding Path="SQLServer" />
+                                        </MultiBinding>
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </StatusBar>
+    </DockPanel>
+</Window>
