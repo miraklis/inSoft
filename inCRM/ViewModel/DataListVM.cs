@@ -206,8 +206,6 @@ namespace inCRM
 				int total = (int)Math.Ceiling((double)FilteredItemsCount / CurrentPageSize);
 				if (total == 0)
 					return 1;
-				if (CurrentPage > total)
-					CurrentPage = total;
 				return total;
 			}
 		}
@@ -368,6 +366,8 @@ namespace inCRM
 		{
 			int segmentSize = 50;
 			int segment = 0;
+			if (CurrentPage > TotalPages)
+				CurrentPage = TotalPages;
 			int skip = CurrentPage <= 1 ? 0 : (CurrentPage - 1) * CurrentPageSize;
 			Items = new ObservableCollection<T>();
 			List<T> listToShow = filteredData.Skip(skip).Take(CurrentPageSize).ToList();
