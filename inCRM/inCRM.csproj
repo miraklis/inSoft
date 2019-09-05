@@ -87,11 +87,12 @@
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\CompaniesListViewModel.cs" />
     <Compile Include="ViewModel\ContactVM.cs" />
-    <Compile Include="ViewModel\CurtomersListVM.cs" />
     <Compile Include="ViewModel\CustomerItemVM.cs" />
     <Compile Include="Helper\ObservableList.cs" />
     <Compile Include="ViewModel\CustomerDetailsVM.cs" />
     <Compile Include="Helper\Globals.cs" />
+    <Compile Include="ViewModel\CustomersVM.cs" />
+    <Compile Include="ViewModel\DataListVM.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainWindowVM.cs" />
     <Compile Include="ViewModel\ValidatedViewModel.cs" />
@@ -188,6 +189,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\edit.png" />
+    <Resource Include="Images\remove.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
